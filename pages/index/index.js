@@ -50,7 +50,7 @@ Page({
     console.log("Always query data")
     this.timeInterval = setInterval(function(){
       wx.request({
-        url: 'https://easy-mock.com/mock/5d3669cbad09957385f160dc/example/mock',
+        url: 'https://hackathon-posture.azurewebsites.net/api/v1/Posture/QueryDemoPostureInfoAsync',
         data: {
           rotation: ''
         },
@@ -58,9 +58,9 @@ Page({
           'content-type': 'application/json' // 默认值
         },
         success: function (res) {
-          console.log(res.data)
+          console.log(res.data["data"]["rotation"])
           that.setData({
-            rotation: 45
+            rotation: res.data["data"]["rotation"]
           })
         }
       })
