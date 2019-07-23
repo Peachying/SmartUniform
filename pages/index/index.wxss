@@ -22,9 +22,14 @@
   align-items: center;
 }
 
-.img{
+.imgPure{
   width: 300px;
   height:300px;
+}
+.imgRed{
+   width: 300px;
+  height:300px;
+  filter: contrast(1.33) hue-rotate(199deg) saturate(3) ;
 }
 
 .title{

@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <image class='img' src="/images/people.jpg" style="transform:rotate({{rotation}}deg);"></image>    
+    <image class="{{rotation>30? 'imgRed' : 'imgPure'}}" src="/images/people.jpg" style="transform:rotate({{rotation}}deg);"></image>    
   </view>
   <view class="usermotto">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
